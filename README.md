@@ -49,3 +49,14 @@ that explains the project’s goals in a simple way, and featuring some examples
    npm run dev
    ```
 3. Open your browser and go to http://localhost:3000
+
+## GitHub API rate limiting
+
+The app makes requests to the GitHub API. Unauthenticated requests are subject to very low rate limits. During local development you can increase the quota by providing a personal access token in the `GH_AUTH_TOKEN` environment variable.
+
+Export the token before starting the development server:
+
+```bash
+export GH_AUTH_TOKEN=<your token>
+npm run dev
+```
